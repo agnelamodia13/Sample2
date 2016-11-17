@@ -43,7 +43,8 @@ module.exports = function (config) {
         },
         port: 9876,
         colors: true,
-        autoWatch: false,  
+        autoWatch: false,
+browsers: ['Chrome', 'ChromeCanary'],		
     customLaunchers: {
         Chrome_travis_ci: {
             base: 'Chrome',
