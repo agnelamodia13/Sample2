@@ -1,0 +1,37 @@
+{
+  "name": "angular2-quickstart",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "typings": "typings",
+    "postinstall": "typings install",
+    "remap-istanbul": "remap-istanbul -i ./report/coverage/coverage-final.json -o ./report/coverage/html-report -t html",
+    "test": "npm run tsc && karma start && npm run remap-istanbul"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "2.0.0-beta.9",
+    "systemjs": "0.19.24",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "0.5.15"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "jasmine-core": "2.4.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.7",
+    "karma-sourcemap-loader": "^0.3.7",
+    "lite-server": "^2.1.0",
+    "remap-istanbul": "^0.5.1",
+    "typescript": "^1.8.7",
+    "typings": "^0.7.5"
+  }
+}
