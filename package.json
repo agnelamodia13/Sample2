@@ -9,7 +9,7 @@
     "typings": "typings",
     "postinstall": "typings install",
     "remap-istanbul": "remap-istanbul -i ./report/coverage/coverage-final.json -o ./report/coverage/html-report -t html",
-    "test": "npm run tsc && karma start && npm run remap-istanbul"
+    "test": "npm run tsc && karma start"
   },
   "license": "ISC",
   "dependencies": {
