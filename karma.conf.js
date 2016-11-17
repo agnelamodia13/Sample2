@@ -42,10 +42,16 @@ module.exports = function (config) {
         port: 9876,
         colors: true,
         autoWatch: false,
-        // use Chrome to launch the tests
-        browsers: [
-            'Chrome'
-        ],
+		customLaunchers: {
+        Chrome_travis_ci: {
+            base: 'Chrome',
+            flags: ['--no-sandbox']
+        }
+    },
+};
+ 
+if (process.env.TRAVIS) {
+    configuration.browsers = ['Chrome_travis_ci'];
         logLevel: config.LOG_INFO,
         singleRun: true
     });
