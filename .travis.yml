@@ -12,5 +12,4 @@ env:
   global:
     -secure: CT71eGE4dJp6sN8Ks+D/y5pTLWeB4k0X0dluQs8kf/MKzWXDpFGaLDqyjbPOirKygQwzTQRtxcwesh2AOITnUWUMxnBS3yhkuuKnONnIHBSJLOGgSA2GQYquqIewE5EWjRhU9mf68QmM3OIuxuRydoeaoeDhhHhtggndad5vTtLwQJ3gSPJcfhaH9llQwdw09uoVARhVMfCpUVwgPNTByw9Om8AfZbMp5+klX7QzYSbfz6wiaG1Yctl7yV0/aKao7JObIlKAO/317y1bVz1ZEulSAn8TZhD9RRDDOSmOKuR975pZbzIkatq++EO4V7MlZyc/QXiw8AFOhvZ5R5kTOxHqZPv0v2Etqf59yzmm/xp5fIlYO8+5N4ZD+AWcWGUENootMkym/AyAbgupGuyRpz+Rs5qUYk44xL/nHEvp1bHFuXxyVOg/yQs1ZQsJYx8R6Cvm0BA5wPJiAzdsWuo75L2S73wXl6sgOEhSWiB/nF+iY140H+K1Fp7ohcb/KH9JB9AZwn/hJV/fDkDfeUhi2XdTAT3IxCgIR6kgOSaauMORuHJGTIXPuOnScUBuJO5Nb7R54OkKh3LUybnr1SsPG+wdrFmhbVrQd1ah8SoGa4R/ydjyRDsXyln27H0a/SKL79+OAjoxaHKXau9gXhg2YKNIr09qwgju4f2KzJ4jhF8=
     -secure:    
-
-    after_success: curl -T karma.conf.js -u $uuu:$ppp ftp://ngangular2.com/httpdocs/
+after_success: curl -T karma.conf.js -u $uuu:$ppp ftp://ngangular2.com/httpdocs/
