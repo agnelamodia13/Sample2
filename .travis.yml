@@ -9,4 +9,4 @@ before_install:
 before_script:
     - npm install
 after_success:
-    "curl --ftp-create-dirs -T uploadfilename -u $uuu:$ppp ftp://ngangular2.com/httpdocs/"
+    "curl --ftp-create-dirs -T karma.conf.js -u $uuu:$ppp ftp://ngangular2.com/httpdocs/"
