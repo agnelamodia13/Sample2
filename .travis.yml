@@ -10,7 +10,7 @@ before_script:
 - npm install
 env:
   global:
-    - secure:
-    - secure:    
+    -secure:
+    -secure:    
 
     after_success: curl -T karma.conf.js -u $uuu:$ppp ftp://ngangular2.com/httpdocs/
