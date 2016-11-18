@@ -3,8 +3,8 @@
 module.exports = function (config) {
 	
 	var configuration = {
-		
-		basePath: './',
+  
+      basePath: './',
         frameworks: ['jasmine'],
         // files needed by angular js plus application and test files
         files: [
@@ -44,23 +44,18 @@ module.exports = function (config) {
         port: 9876,
         colors: true,
         autoWatch: false,
-        // use Chrome to launch the tests
-        browsers: [
-            'Chrome'
-        ],
-		customLaunchers: {
+browsers: ['Chrome', 'ChromeCanary'],		
+    customLaunchers: {
         Chrome_travis_ci: {
             base: 'Chrome',
             flags: ['--no-sandbox']
         }
-    },
-        logLevel: config.LOG_INFO,
-        singleRun: true
-		
-	}
-	
-	if (process.env.TRAVIS) {
+    }
+};
+
+if (process.env.TRAVIS) {
     configuration.browsers = ['Chrome_travis_ci'];
 }
-    config.set( configuration);
+
+ config.set(configuration);
 };
