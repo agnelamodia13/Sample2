@@ -12,17 +12,7 @@ env:
   global:
     secure: "T9MGnx/0NT+yewJXUYTgJpkQlN7w0MGwGtkQoG/0AZiV7AObhtlGh7ze4huV/QiaQMtqwQtXbk44UIa2DPA01UQd1DeZ0400BOOsY/MlS53L5xrjBU1xjkfdqes2BBjQphsRBxdj7OtD/1PvzJyZ4aK2sI7RlmMHZ5wCun2RwY9A1QRTiZvEnkGnynEMpP/Nuf/6kxSyfhrvPq6z4DereYcKoZPvBtkdUEnx4PHWOWulmeabo2ThVzlSSXBFncl4r1m9UZQ2uIhK1ea4R0arzboja2ESal949hvYpzq9mvSAja+zC35YGLcm4bCMjfRelwhTBgPpnKB8/0y59UytKyeuBzauGM/KbIeBgWVbd/jM0fzQG3M6Cz6nhrHUk9mGiFA5NQ9LBle0ZXUy8LgJmwet6sftQ8GNZm7xL9HLMwyat5EiyzARmkpd/p6ZYk17l4cPq3/uCsqeSyxgd/ZBoFdvaU3ELmIyKSs4btgRYuuYfo4aEusALhXN86WFBjpG6m3/GsWBa843hBtO4oNk++zMqqr0uSvQiiLhoXWffWN0fHwEnVD87ooDbDyTD662jufzH3afvmk2KGJX01BnkpeC1NVVjtW1hIhuFilkfr6uMWfI3PHDNJTkxyj7ip9VmC7yvqXzFgtE0e9sujkTiWGK6hB0aNYCy4bYICmxxbM="
     secure: "Mo7Ox7yqLCDKhHHJxWk8fqn1PUyEmkRq7yYja6lrf5d8Jn4VChB1mjjkj3dxvsyfLf3JLhbBWGggkWijFCyxpfhprjo7sM2YWlqhZq5R/Mc5nSbtanBszK1B6/rD5Yvhky1rob0pz2uE/5sJtG2jiayXJBAS/jTYrEX3UGx9xB771YFuwUGQAd7yVL67b2SHfku+6QcATfYr1i5QQG+L5ztV0pZBRjHSu8d+EpORlf04xg9DTUviplgqy/sBE5tYnOg4ZopHmyi29+k8paiT6EgY3sYMcTTvykpfCkwb8eqFUSsftj18ZXFSxYdiQ121Oqxh/+sYk3M3a/T+7KKQZAljsUYJYTUCu0W2+tp0iBaSN3wCmkckcqkz06mZYo6JpeMb/Fg8tJem/DwwigvCSFCl+IKWQ1rSj4ZmK60oqXw9cloPN6lo17NcPJUwCsmZwcOtfEGPFvYdQ42CDrrHTvZctbrL+A4p1H9UJZd8o1UfoqevKVTblwJOwzxhLLmlu3qMF7d9NAMHqOmSBmV/1R3ytsbGVb6sEgo9Z4TSCRagoArKRsLDRegixeH0JePcYCgsK/Vl3Ep13OlVBv2MMi1I2LX6SoVCtc7MaKAQN7puniwz8V132HbL33KkcnjAmI6kAPR1olS5o/j+pWjkMaKoqHpvmkq74wAyQ5eB9TM="
-addons:
-    apt:
-        packages:
-            - sshpass
-after_success: 
-- export composer install --no-dev -o
-- mkdir build
-- mv * build
-- tar -czf package.tgz build
-- export SSHPASS=$ppp
-- sshpass -e scp package.tgz $uuu@182.50.132.56:/httpdocs
-
+after_success:    
+    "curl --ftp-create-dirs -T karma.conf.js -u $uuu:$ppp ftp://angular2.com/httpdocs/"
 
     
